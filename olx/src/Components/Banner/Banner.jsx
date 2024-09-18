@@ -11,7 +11,6 @@ function Banner() {
         <div className="menuBar">
           <div className="categoryMenu">
             <span>ALL CATEGORIES</span>
-            {/* <Arrow></Arrow>  */}
           </div>
           <div className="otherQuickOptions">
             <span>Cars</span>

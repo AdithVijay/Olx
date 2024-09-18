@@ -24,6 +24,11 @@ function Header() {
       console.error('Error signing out:', error.message);
     }
   };
+
+
+  function sell(){
+    navigate('/create')
+  }
   
   return (
     <div className="headerParentDiv">
@@ -52,7 +57,7 @@ function Header() {
           {/* <Arrow></Arrow> */}
         </div>
         <div className="loginPage">
-          <span>{user ? user.displayName : 'Login'}</span>
+          <span>{user ? user.email : 'Login'}</span>
           <hr />
         </div>
         <button onClick={handleLogout} >Logout</button>
@@ -60,7 +65,7 @@ function Header() {
           {/* <SellButton></SellButton> */}
           <div className="sellMenuContent">
             {/* <SellButtonPlus></SellButtonPlus> */}
-            <span>SELL</span>
+           <div onClick={sell}>Sell</div>
           </div>
         </div>
       </div>

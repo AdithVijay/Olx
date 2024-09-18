@@ -14,7 +14,7 @@ export default function Signup() {
   const [phone, setphone] = useState('');
   const [password, setpassword] = useState('');
   const { db } = useContext(FirebaseContext)
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate(); 
 
   const handleSubmit=async (e)=>{
     e.preventDefault() 
@@ -22,8 +22,6 @@ export default function Signup() {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       console.log('User signed up:', user);
-
-
 
       await addDoc(collection(db, 'users'), {
         uid: user.uid,
